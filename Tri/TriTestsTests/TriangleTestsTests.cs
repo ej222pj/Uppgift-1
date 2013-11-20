@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tri
+namespace TriTestsTests
 {
-    class Program
+    class TriangleTestsTests
     {
-        static void Main(string[] args)
-        {
-            
-        }
     }
 }

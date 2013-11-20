@@ -42,19 +42,19 @@ public class Triangle {
     return sides.Distinct<double>().Count();
   }
 
-  public bool isScalene() {
+  public bool isScalene() {//Inga lika
     if(uniqueSides()==1)
       return true;
     return false;
   }
 
-  public bool isEquilateral() {
+  public bool isEquilateral() {//Liksidig
     if(uniqueSides()==3)
       return true;
     return false;
   }
 
-  public bool isIsosceles() {
+  public bool isIsosceles() {//Likbent
     if(uniqueSides()==2)
       return true;
     return false;
