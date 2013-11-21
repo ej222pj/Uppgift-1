@@ -51,14 +51,15 @@ namespace UnitTestTri
             new Triangle(new Point[] { new Point(3, 3), new Point(4, 4), new Point(5, 5) });
         }
         [TestMethod]
-        public void TestThreePointConst()
+        public void TestThreePointConstruct()
         {
             new Triangle(new Point(3, 3), new Point(4, 4), new Point(5, 5));
         }
-        //[TestMethod]
-        //public void TestLoopConst()
-        //{
-        //    new Triangle(, 4);
-        //}
+        [TestMethod]
+        public void TestLoopConstruct()
+        {
+            double[] array = new double[5];
+            Triangle tri = new Triangle(array);
+        }
     }
 }
