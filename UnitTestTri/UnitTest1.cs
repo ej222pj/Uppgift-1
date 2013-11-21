@@ -6,7 +6,7 @@ namespace UnitTestTri
     [TestClass]
     public class TriangleUnitTest
     {
-        [TestMethod]
+        [TestMethod]//Ska lyckas
         public void isScalene()
         {
             Triangle tri = new Triangle(1.132, 1.132, 1.132);
@@ -23,6 +23,30 @@ namespace UnitTestTri
         {
             Triangle tri = new Triangle(1.1, 1.11, 1.5627219842313604);
             Assert.IsTrue(tri.isEquilateral());
+        }//Nedanstående tester ska misslyckas
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void LessThanThreePoints()
+        {
+            new Triangle(new[] { new Point(0, 0), new Point(1, 1) });
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void MoreThanThreePoints()
+        {
+            new Triangle(new[] { new Point(0, 0), new Point(1, 1), new Point(2, 2), new Point(3, 3) });
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TwoIdenticalPoints()
+        {
+            new Triangle(new[] { new Point(0, 0), new Point(0, 0), new Point(1, 1) });
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void EmptyArray()
+        {
+            new Triangle(new Point[] { });
         }
     }
 }
