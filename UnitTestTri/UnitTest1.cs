@@ -6,19 +6,19 @@ namespace UnitTestTri
     [TestClass]
     public class TriangleUnitTest
     {    
-        [TestMethod]//Scalene
+        [TestMethod]//Scalene, Inga lika
         public void isScaleneTrue()
         {
-            Triangle tri = new Triangle(1.132, 2.132, 3.132);
+            Triangle tri = new Triangle(3.0, 4.0, 5.0);
             Assert.IsTrue(tri.isScalene());
         }
         [TestMethod]
         public void isScaleneFalse()
         {
-            Triangle tri = new Triangle(1, 1, 2);
+            Triangle tri = new Triangle(2, 2, 3);
             Assert.IsFalse(tri.isScalene());
         }
-        [TestMethod]//Isosceles
+        [TestMethod]//Isosceles likbent
         public void isIsoscelesTrue()
         {
             Triangle tri = new Triangle(1.0, 1.4142135623730951, 1.0);
@@ -30,10 +30,10 @@ namespace UnitTestTri
             Triangle tri = new Triangle(1.0, 1.0, 1.0);
             Assert.IsFalse(tri.isIsosceles());
         }
-        [TestMethod]//Equilateral
+        [TestMethod]//Equilateral liksidig
         public void isEquilateralTrue()
         {
-            Triangle tri = new Triangle(1.1, 1.11, 1.5627219842313604);
+            Triangle tri = new Triangle(1.56272198423136, 1.56272198423136, 1.56272198423136);
             Assert.IsTrue(tri.isEquilateral());
         }
         [TestMethod]
