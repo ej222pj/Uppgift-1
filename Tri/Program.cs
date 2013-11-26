@@ -12,7 +12,7 @@ namespace Tri
         {
             double[] input = new double[3];
             for (int i = 0; i < 3; i++)
-                input[i] = double.Parse(args[i]);
+                input[i] = double.Parse(/*args[i]*/Console.ReadLine());
             //Console.Readline() 
             Triangle t = new Triangle(input);
 
