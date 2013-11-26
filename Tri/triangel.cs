@@ -42,7 +42,7 @@ public class Triangle {
     return sides.Distinct<double>().Count();
   }
 
-  public bool isScalene() {//Inga lika
+  public bool isScalene() { //Inga lika
     if(uniqueSides()==1)
       return true;
     return false;
