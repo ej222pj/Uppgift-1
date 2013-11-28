@@ -47,6 +47,32 @@ namespace UnitTestTri
         {
             new Triangle(new Point[] { new Point(3, 3), new Point(4, 4), new Point(5, 5) });
         }
+        [TestMethod]//Testar om konstruktorn kan ta in 2 tal i en array
+        public void TestArrayWithTwoInput()
+        {
+            try 
+            {
+                new Triangle(new Point[] { new Point(4, 4), new Point(5, 5) });
+                Assert.Fail("no exception thrown");//Kommer koden hit har inget exception kastats
+            }
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex is Exception);
+            }
+        }
+        [TestMethod]//Testar om konstruktorn kan ta in fler än 3 tal
+        public void TestArrayWithFiveInput()
+        {
+            try
+            {
+                new Triangle(new Point[] { new Point(4, 4), new Point(5, 5), new Point(5, 5), new Point(3, 3), new Point(6, 6) });
+                Assert.Fail("no exception thrown");
+            }
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex is Exception);
+            }
+        }
         [TestMethod]//Testar om konstruktorn kan ta in 3 points
         public void TestThreePointConstruct()
         {
@@ -55,7 +81,7 @@ namespace UnitTestTri
         [TestMethod]//Testar loop konstruktorn
         public void TestLoopConstruct()
         {
-            double[] array = new double[5];
+            double[] array = new double[3];
             Triangle tri = new Triangle(array);
         }
     }
